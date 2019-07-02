@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>アプリ学習履歴</title>
+  <link rel="stylesheet" href="stylesheet.css">
+  <div class="menu-left">
+    <h3>学習履歴</h3>
+  </div>
+  <div class="menu_back">
+    <ul class="menu">
+      <li><a href="#add_math">1.四則演算</a></li>
+      <li><a href="#hayami_hyo">2.年齢計算</a></li>
+      <li><a href="#todo-list">3.todoリスト</a></li>
+      <li><a href="#image-rotate">4.画像回転</a></li>
+      <li><a href="#link">5.Copyright</a></li>
+    </ul>
+  </div>
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <form name="fm">
+    <div class="content math" id="add_math">
+        <h3 class="title-menu">1.四則演算</h3>
+      <p class="math_add">・足し算　
+        <input size="20" type="text" name="A">+
+        <input size="20" type="text" name="B">
+        =
+        <input size="20" type="text" name="C">
+        <input type="button" value="計算" onclick="sisoku(kasan,A,B,C)">
+      </p>
+      <p class="math_dec" >・引き算　
+        <input size="20" type="text" name="A_1">－
+        <input size="20" type="text" name="B_1">
+        =
+        <input size="20" type="text" name="C_1">
+        <input type="button" value="計算" onclick="sisoku(genzan,A_1,B_1,C_1)">
+      </p>
+      <p class="math_multi" >・掛け算　
+        <input size="20" type="text" name="A_2">×
+        <input size="20" type="text" name="B_2">
+        =
+        <input size="20" type="text" name="C_2">
+        <input type="button" value="計算" onclick="sisoku(kakezan,A_2,B_2,C_2)">
+      </p>
+      <p class="math_wari" >・割り算　
+        <input size="20" type="text" name="A_3">÷
+        <input size="20" type="text" name="B_3">
+        =
+        <input size="20" type="text" name="C_3">
+        <input type="button" value="計算" onclick="sisoku(warizan,A_3,B_3,C_3)">
+      </p>
+    </div>
+
+    <div class="content nenrei" id="hayami_hyo">
+        <h3 class="title-menu">2.年齢計算</h3>
+      <select name="year" onchange="dateCheck('year', 'month', 'day')">
+        <option value="1948">1948年</option>
+        <option value="1949">1949年</option>
+        <option value="1950">1950年</option>
+        <option value="1951">1951年</option>
+        <option value="1952">1952年</option>
+        <option value="1953">1953年</option>
+        <option value="1954">1954年</option>
+        <option value="1955">1955年</option>
+        <option value="1956">1956年</option>
+        <option value="1957">1957年</option>
+        <option value="1958">1958年</option>
+        <option value="1959">1959年</option>
+        <option value="1960">1960年</option>
+        <option value="1961">1961年</option>
+        <option value="1962">1962年</option>
+        <option value="1963">1963年</option>
+        <option value="1964">1964年</option>
+        <option value="1965">1965年</option>
+        <option value="1966">1966年</option>
+        <option value="1967">1967年</option>
+        <option value="1968">1968年</option>
+        <option value="1969">1969年</option>
+        <option value="1970">1970年</option>
+        <option value="1971">1971年</option>
+        <option value="1972">1972年</option>
+        <option value="1973">1973年</option>
+        <option value="1974">1974年</option>
+        <option value="1975">1975年</option>
+        <option value="1976">1976年</option>
+        <option value="1977">1977年</option>
+        <option value="1978">1978年</option>
+        <option value="1979">1979年</option>
+        <option value="1980">1980年</option>
+        <option value="1981">1981年</option>
+        <option value="1982">1982年</option>
+        <option value="1983">1983年</option>
+        <option value="1984">1984年</option>
+        <option value="1985">1985年</option>
+        <option value="1986">1986年</option>
+        <option value="1987">1987年</option>
+        <option value="1988">1988年</option>
+        <option value="1989">1989年</option>
+        <option value="1990">1990年</option>
+        <option value="1991">1991年</option>
+        <option value="1992">1992年</option>
+        <option value="1993">1993年</option>
+        <option value="1994">1994年</option>
+        <option value="1995">1995年</option>
+        <option value="1996">1996年</option>
+        <option value="1997">1997年</option>
+        <option value="1998">1998年</option>
+        <option value="1999">1999年</option>
+        <option value="2000">2000年</option>
+        <option value="2001">2001年</option>
+        <option value="2002">2002年</option>
+        <option value="2003">2003年</option>
+        <option value="2004">2004年</option>
+        <option value="2005">2005年</option>
+        <option value="2006">2006年</option>
+        <option value="2007">2007年</option>
+        <option value="2008">2008年</option>
+        <option value="2009">2009年</option>
+        <option value="2010">2010年</option>
+        <option value="2011">2011年</option>
+        <option value="2012">2012年</option>
+        <option value="2013">2013年</option>
+        <option value="2014">2014年</option>
+        <option value="2015">2015年</option>
+        <option value="2016">2016年</option>
+        <option value="2017">2017年</option>
+        <option value="2018">2018年</option>
+        <option value="2019">2019年</option>
+        <option value="2020">2020年</option>
+      </select>
+
+      <select name="month" onchange="dateCheck('year', 'month', 'day')">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+      </select>月
+      <select name="day">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13">13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        <option value="16">16</option>
+        <option value="17">17</option>
+        <option value="18">18</option>
+        <option value="19">19</option>
+        <option value="20">20</option>
+        <option value="21">21</option>
+        <option value="22">22</option>
+        <option value="23">23</option>
+        <option value="24">24</option>
+        <option value="25">25</option>
+        <option value="26">26</option>
+        <option value="27">27</option>
+        <option value="28">28</option>
+        <option value="29">29</option>
+        <option value="30">30</option>
+        <option value="31">31</option>
+      </select>日
+      <input type="button" value="年齢" onclick="nenrei()"><br>
+      <input size="4" type="text" name="C_4">歳
+
+    </div>
+    <div class="content todo" id="todo-list">
+      <h3 class="title-menu">3.Todo list</h3>
+        <div>
+        <input type="text" id="item">
+        <button type="button" onclick="submitItem()">追加</button>
+        <button type="button" onclick="removeItem()">削除</button>
+      </div>
+      <ul id="todoList"></ul>
+    </div>
+    <div class="content imagerote" id="image-rotate">
+        <h3 class="title-menu">4.画像回転</h3>
+      <img id="img1" src="img/beach-2836300_640.jpg" /><br>
+      <input type="button" value="180度回転" onclick="kaiten(180)">
+    </div>
+    <div class="content lin" id="link">
+        <h3 class="title-menu lins">5.Copyright</h3>
+        <h5 class="fade-1-4"> &copy; Copyright | takio 2019 All Right Reserved</h5>
+    </div>
+  </form>
+
+</body>
+
+</html>
