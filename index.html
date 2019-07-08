@@ -23,40 +23,40 @@
 <body>
   <form name="fm">
     <div class="content math" id="add_math">
-        <h3 class="title-menu">1.四則演算</h3>
-      <p class="math_add">・足し算　
-        <input size="20" type="text" name="A">+
-        <input size="20" type="text" name="B">
+      <h3 class="title-menu">1.四則演算</h3>
+      <p name="math_add">・足し算　
+        <input size="20" type="text" name="add_first">+
+        <input size="20" type="text" name="add_second">
         =
-        <input size="20" type="text" name="C">
-        <input type="button" value="計算" onclick="sisoku(kasan,A,B,C)">
+        <input size="20" type="text" name="result_add">
+        <input type="button" id="add_up" value="計算">
       </p>
-      <p class="math_dec" >・引き算　
-        <input size="20" type="text" name="A_1">－
-        <input size="20" type="text" name="B_1">
+      <p name="math_dec" >・引き算　
+        <input size="20" type="text" name="sub_first">－
+        <input size="20" type="text" name="sub_second">
         =
-        <input size="20" type="text" name="C_1">
-        <input type="button" value="計算" onclick="sisoku(genzan,A_1,B_1,C_1)">
+        <input size="20" type="text" name="result_sub">
+        <input type="button" id="do_subtraction"  value="計算">
       </p>
-      <p class="math_multi" >・掛け算　
-        <input size="20" type="text" name="A_2">×
-        <input size="20" type="text" name="B_2">
+      <p name="math_multi" >・掛け算　
+        <input size="20" type="text" name="multi_first">×
+        <input size="20" type="text" name="multi_second">
         =
-        <input size="20" type="text" name="C_2">
-        <input type="button" value="計算" onclick="sisoku(kakezan,A_2,B_2,C_2)">
+        <input size="20" type="text" name="result_multi">
+        <input type="button" id="do_multiplication" value="計算">
       </p>
-      <p class="math_wari" >・割り算　
-        <input size="20" type="text" name="A_3">÷
-        <input size="20" type="text" name="B_3">
+      <p name="math_divide" >・割り算　
+        <input size="20" type="text" name="div_first">÷
+        <input size="20" type="text" name="div_second">
         =
-        <input size="20" type="text" name="C_3">
-        <input type="button" value="計算" onclick="sisoku(warizan,A_3,B_3,C_3)">
+        <input size="20" type="text" name="result_div">
+        <input type="button" id="divide" value="計算">
       </p>
     </div>
 
     <div class="content nenrei" id="hayami_hyo">
         <h3 class="title-menu">2.年齢計算</h3>
-      <select name="year" onchange="dateCheck('year', 'month', 'day')">
+      <select id="year">
         <option value="1948">1948年</option>
         <option value="1949">1949年</option>
         <option value="1950">1950年</option>
@@ -132,7 +132,7 @@
         <option value="2020">2020年</option>
       </select>
 
-      <select name="month" onchange="dateCheck('year', 'month', 'day')">
+      <select id="month" >
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -146,7 +146,7 @@
         <option value="11">11</option>
         <option value="12">12</option>
       </select>月
-      <select name="day">
+      <select id="day">
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -179,7 +179,7 @@
         <option value="30">30</option>
         <option value="31">31</option>
       </select>日
-      <input type="button" value="年齢" onclick="nenrei()"><br>
+      <input type="button" id="age_culcurate" value="年齢" /><br>
       <input size="4" type="text" name="C_4">歳
 
     </div>
@@ -187,15 +187,15 @@
       <h3 class="title-menu">3.Todo list</h3>
         <div>
         <input type="text" id="item">
-        <button type="button" onclick="submitItem()">追加</button>
-        <button type="button" onclick="removeItem()">削除</button>
+        <input type="button" id ="todo_add" value="追加">
+        <input type="button" id ="todo_remove" value="削除">
       </div>
       <ul id="todoList"></ul>
     </div>
     <div class="content imagerote" id="image-rotate">
         <h3 class="title-menu">4.画像回転</h3>
       <img id="img1" src="img/beach-2836300_640.jpg" /><br>
-      <input type="button" value="180度回転" onclick="kaiten(180)">
+      <input type="button" id="rotation" value="180度回転">
     </div>
     <div class="content lin" id="link">
         <h3 class="title-menu lins">5.Copyright</h3>

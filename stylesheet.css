@@ -60,8 +60,8 @@
 }
 .todo{
     background: url("img/uyunienkoDSC_0671_TP_V.jpg");
-    padding-bottom: 200px;
-
+    width: auto;
+    height: 500px;
 }
 .lin{
     background:url("img/background-4276798_640.jpg");
